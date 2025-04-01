@@ -7,3 +7,6 @@ class CustomUser(AbstractUser):
 
     USERNAME_FIELD = 'email'  # Указываем, что уникальным полем будет email
     REQUIRED_FIELDS = []  # Если есть поля, которые должны быть обязательными, укажите их здесь
+
+    def __str__(self):
+        return self.username

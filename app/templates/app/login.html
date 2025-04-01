@@ -1,9 +1,10 @@
 {% extends "app/base.html" %}
 {% block content %}
-    <h2>Регистрация</h2>
+    <h2>Авторизация</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}  <!-- Отображаем форму -->
-        <button type="submit">Зарегистрироваться</button>
+        <button type="submit">Войти</button>
     </form>
+<p>Нет аккаунта??? <a href="{% url 'register' %}">Зарегистрироваться</a></p>
 {% endblock %}
