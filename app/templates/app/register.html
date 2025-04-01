@@ -6,4 +6,10 @@
         {{ form.as_p }}  <!-- Отображаем форму -->
         <button type="submit">Зарегистрироваться</button>
     </form>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-warning">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+
 {% endblock %}
